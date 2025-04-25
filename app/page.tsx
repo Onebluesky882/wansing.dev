@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FaUserShield, FaDatabase, FaCode } from "react-icons/fa";
 
 export default async function Homepage() {
@@ -24,10 +25,11 @@ export default async function Homepage() {
             </div>
           </div>
           <div className="hidden lg:block">
-            <img
-              src="/hero-illustration.svg"
+            <Image
+              src="/images/dev.svg"
               alt="Hero Illustration"
-              className="w-full max-w-md mx-auto"
+              className="w-full max-w-md mx-auto object-contain"
+              fill
             />
           </div>
         </div>
@@ -93,8 +95,8 @@ export default async function Homepage() {
           <div className="bg-gray-50 rounded-xl p-6 shadow-md">
             <h3 className="font-bold mb-2">Example:</h3>
             <p className="text-sm text-gray-700">
-              "I need a developer to help integrate Stripe Checkout to my SaaS
-              dashboard. Budget: $200. Timeline: 3 days."
+              I need a developer to help integrate Stripe Checkout to my SaaS
+              dashboard. Budget: $200. Timeline: 3 days.
             </p>
           </div>
         </div>
