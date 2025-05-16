@@ -1,5 +1,11 @@
 import Image from "next/image";
 import { FaUserShield, FaDatabase, FaCode } from "react-icons/fa";
+import posts from "@/lib/posts.json";
+export async function generateStaticParams() {
+  return posts.map((post) => ({
+    name: post.post.toLowerCase(),
+  }));
+}
 
 export default async function Homepage() {
   return (
