@@ -1,23 +1,15 @@
 import posts from "@/lib/posts.json";
 import { Metadata } from "next";
 
-type PostName = {
-  params: { name: string };
+type PageProps = {
+  params: {
+    name: string;
+  };
 };
 
-type Post = {
-  post: string;
-  content: Array<{
-    title: string;
-    knowledge: string[];
-    process: string[];
-  }>;
-};
-type Params = {
-  params: { name: string };
-};
-
-export async function generateMetadata({ params }: Params): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const slug = params.name;
   const post = posts.find((p) => p.post === slug);
 
@@ -40,7 +32,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   };
 }
 
-export default async function BlogPage({ params }: Params) {
+export default async function BlogPage({ params }: PageProps) {
   const slug = params.name;
 
   const post = posts.find((p) => p.post === slug);
