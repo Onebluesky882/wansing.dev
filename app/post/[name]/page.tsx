@@ -1,15 +1,11 @@
 import posts from "@/lib/posts.json";
 import { Metadata } from "next";
 
-type PageProps = {
-  params: {
-    name: string;
-  };
-};
-
 export async function generateMetadata({
   params,
-}: PageProps): Promise<Metadata> {
+}: {
+  params: { name: string };
+}) {
   const slug = params.name;
   const post = posts.find((p) => p.post === slug);
 
@@ -29,10 +25,18 @@ export async function generateMetadata({
       url: `https://wansing.dev/post/${post.post}`,
       type: "article",
     },
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 
-export default async function BlogPage({ params }: PageProps) {
+export default async function BlogPage({
+  params,
+}: {
+  params: { name: string };
+}) {
   const slug = params.name;
 
   const post = posts.find((p) => p.post === slug);
