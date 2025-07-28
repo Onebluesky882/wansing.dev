@@ -106,7 +106,7 @@ export default function PortfolioHomepage() {
                 </div>
                 <div className="p-6 outline-1 bg-black/50">
                   <a target="black" href={project.github}>
-                    <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
+                    <h3 className=" cursor-pointer text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
                       {project.title}
                     </h3>
                   </a>
@@ -135,7 +135,7 @@ export default function PortfolioHomepage() {
                       href={project.demo}
                       className="flex items-center text-gray-400 hover:text-blue-400 transition-colors"
                     >
-                      <span className="mr-2">🔗</span>
+                      <span className="mr-2  cursor-pointer">🔗</span>
                       Demo
                     </a>
                   </div>
