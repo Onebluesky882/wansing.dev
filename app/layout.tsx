@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DevBoard is your space to post jobs",
+  title: "Wansing Del",
   description:
-    "DevBoard is where technology meets collaboration — post dev jobs, share ideas, and build powerful solutions with the community.",
+    "I'm Wansing, a full-stack developer passionate about building fast, scalable web applications. Explore my projects, skills, and experience in modern technologies like NestJS, React, and Go.",
 };
 
 export default function RootLayout({
