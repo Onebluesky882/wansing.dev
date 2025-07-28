@@ -105,9 +105,11 @@ export default function PortfolioHomepage() {
                   />
                 </div>
                 <div className="p-6 outline-1 bg-black/50">
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
-                    {project.title}
-                  </h3>
+                  <a target="black" href={project.github}>
+                    <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
+                      {project.title}
+                    </h3>
+                  </a>
                   <p className="text-gray-400 mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.map((tech, i) => (
@@ -121,6 +123,7 @@ export default function PortfolioHomepage() {
                   </div>
                   <div className="flex space-x-4">
                     <a
+                      target="black"
                       href={project.github}
                       className="flex items-center text-gray-400 hover:text-white transition-colors"
                     >
@@ -128,6 +131,7 @@ export default function PortfolioHomepage() {
                       Code
                     </a>
                     <a
+                      target="black"
                       href={project.demo}
                       className="flex items-center text-gray-400 hover:text-blue-400 transition-colors"
                     >
