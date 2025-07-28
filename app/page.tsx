@@ -105,7 +105,7 @@ export default function PortfolioHomepage() {
                   />
                 </div>
                 <div className="p-6 outline-1 bg-black/50">
-                  <a target="black" href={project.github}>
+                  <a target="black" href={project.demo}>
                     <h3 className=" cursor-pointer text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
                       {project.title}
                     </h3>
