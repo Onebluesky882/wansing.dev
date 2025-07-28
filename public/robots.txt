@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://wansing.dev
+
+# Sitemaps
+Sitemap: https://wansing.dev/sitemap.xml

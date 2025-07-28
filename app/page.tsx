@@ -1,5 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
-
+import { SectionOne } from "./pre-load/Profile";
 export default function PortfolioHomepage() {
   const skills = [
     { icon: "⚛️", name: "React/Next.js", level: 90 },
@@ -12,98 +13,45 @@ export default function PortfolioHomepage() {
 
   const projects = [
     {
-      title: "Sports Betting Platform",
+      title: "Social App",
       description:
-        "Full-stack betting platform with real-time odds and payment integration",
-      tech: ["NestJS", "React", "PostgreSQL", "WebSocket"],
-      github: "#",
-      demo: "#",
-      image: "🎲",
+        "A social media platform featuring user authentication, real-time post updates, likes/comments, and profile management — built with a modern fullstack stack.",
+      tech: ["Next.js", "TypeScript", "Supabase", "Tailwind"],
+      github: "",
+      demo: "http://web-boardmvp.vercel.app/",
+      image: "images/socialApp.png",
     },
     {
-      title: "E-commerce Dashboard",
+      title: "BackEnd Full NestJS",
       description:
-        "Admin dashboard with analytics, inventory management, and user roles",
-      tech: ["Next.js", "TypeScript", "Prisma", "Tailwind"],
-      github: "#",
-      demo: "#",
-      image: "📊",
+        "Robust backend API with full authentication (JWT, refresh tokens), role-based access control, database integration, and RESTful endpoints — built using NestJS and PostgreSQL.",
+      tech: ["NestJS", "TypeScript", "PostgreSQL", "Drizzle", "Docker"],
+      github: "https://github.com/Onebluesky882/menuX-backend",
+      demo: "https://menux-production-7266.up.railway.app",
+      image: "images/backend.png",
     },
     {
       title: "Restaurant Menu System",
-      description: "Digital menu with ordering system and kitchen management",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      github: "#",
-      demo: "#",
-      image: "🍽️",
+      description:
+        "A digital restaurant menu platform with admin dashboard, dynamic menu management, and kitchen-side order processing. Supports image uploads and real-time updates.",
+      tech: ["React", "Node.js", "Drizzle", "Qr code API"],
+      github: "https://github.com/Onebluesky882/menuX-client",
+      demo: "https://menu-x-five.vercel.app/",
+      image: "images/frontend.png",
+    },
+    {
+      title: "App Order Food With Live QR Code Checking",
+      description:
+        "An ordering system where customers scan a QR code to view menus, place orders, and track food status. Designed for real-time communication between kitchen and customer devices.",
+      tech: ["React", "Node.js", "Next.js", "QR Code API"],
+      github: "https://github.com/Onebluesky882/menuX-consumer",
+      demo: "https://menuxclient.vercel.app/",
+      image: "images/consumer.png",
     },
   ];
 
-  return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
-
-        <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-          <div className="mb-8">
-            <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-4xl font-bold">
-              W
-            </div>
-            <h1 className="text-6xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Wansing Dev
-            </h1>
-            <h2 className="text-2xl md:text-3xl text-gray-300 mb-6">
-              Full-Stack Developer & Problem Solver
-            </h2>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
-              Building scalable web applications with modern technologies.
-              Specializing in React, NestJS, and cloud solutions.
-            </p>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <a
-              href={`/resume.pdf`}
-              download
-              type="file"
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
-            >
-              📥 Download CV
-            </a>
-            <button className="px-8 py-4 border border-gray-600 rounded-full font-semibold hover:bg-gray-800 transition-all duration-300">
-              View Projects
-            </button>
-          </div>
-
-          <div className="flex justify-center space-x-6">
-            <a
-              href="#"
-              className="p-3 bg-gray-800 rounded-full hover:bg-blue-600 transition-all duration-300 hover:scale-110"
-            >
-              <div className="text-2xl">🐱</div>
-            </a>
-            <a
-              href="#"
-              className="p-3 bg-gray-800 rounded-full hover:bg-blue-600 transition-all duration-300 hover:scale-110"
-            >
-              <div className="text-2xl">💼</div>
-            </a>
-            <a
-              href="#"
-              className="p-3 bg-gray-800 rounded-full hover:bg-purple-600 transition-all duration-300 hover:scale-110"
-            >
-              <div className="text-2xl">📧</div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills Section */}
+  const SectionTwo = () => {
+    return (
       <section className="py-20 bg-gray-900/50 backdrop-blur">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -133,9 +81,11 @@ export default function PortfolioHomepage() {
           </div>
         </div>
       </section>
-
-      {/* Projects Section */}
-      <section className="py-20">
+    );
+  };
+  const SectionThree = () => {
+    return (
+      <section id="projects" className="py-20">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Featured Projects
@@ -145,12 +95,16 @@ export default function PortfolioHomepage() {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="group bg-gray-800/30 backdrop-blur rounded-2xl overflow-hidden border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
+                className="group flex flex-col bg-gray-800/30 backdrop-blur rounded-2xl overflow-hidden border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
               >
                 <div className="h-48 bg-gradient-to-br from-blue-600/20 to-purple-600/20 flex items-center justify-center text-6xl">
-                  {project.image}
+                  <img
+                    src={project.image}
+                    alt="project"
+                    className="object-contain  "
+                  />
                 </div>
-                <div className="p-6">
+                <div className="p-6 outline-1 bg-black/50">
                   <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
                     {project.title}
                   </h3>
@@ -187,8 +141,10 @@ export default function PortfolioHomepage() {
           </div>
         </div>
       </section>
-
-      {/* About Section */}
+    );
+  };
+  const SectionFour = () => {
+    return (
       <section className="py-20 bg-gray-900/50 backdrop-blur">
         <div className="max-w-4xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -226,8 +182,10 @@ export default function PortfolioHomepage() {
           </div>
         </div>
       </section>
-
-      {/* Contact Section */}
+    );
+  };
+  const SectionFive = () => {
+    return (
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -252,6 +210,21 @@ export default function PortfolioHomepage() {
           </div>
         </div>
       </section>
+    );
+  };
+
+  return (
+    <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
+      <SectionOne />
+      {/* Hero Section */}
+      <SectionTwo />
+      {/* Skills Section */}
+      {/* Projects Section */}
+      <SectionThree />
+      {/* About Section */}
+      <SectionFour />
+      {/* Contact Section */}
+      <SectionFive />
 
       {/* Footer */}
       <footer className="bg-gray-900 py-8 border-t border-gray-800">
