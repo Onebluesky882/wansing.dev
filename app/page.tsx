@@ -13,13 +13,13 @@ export default function PortfolioHomepage() {
 
   const projects = [
     {
-      title: "Social App",
+      title: "Restaurant Menu System",
       description:
-        "A social media platform featuring user authentication, real-time post updates, likes/comments, and profile management — built with a modern fullstack stack.",
-      tech: ["Next.js", "TypeScript", "Supabase", "Tailwind"],
-      github: "",
-      demo: "http://web-boardmvp.vercel.app/",
-      image: "images/socialApp.png",
+        "A digital restaurant menu platform with admin dashboard, dynamic menu management, and kitchen-side order processing. Supports image uploads and real-time updates.",
+      tech: ["React", "Node.js", "Drizzle", "Qr code API"],
+      github: "https://github.com/Onebluesky882/menuX-client",
+      demo: "https://menux-client.vercel.app/",
+      image: "images/frontend.png",
     },
     {
       title: "BackEnd Full NestJS",
@@ -30,23 +30,24 @@ export default function PortfolioHomepage() {
       demo: "https://menux-production-7266.up.railway.app",
       image: "images/backend.png",
     },
+
     {
-      title: "Restaurant Menu System",
-      description:
-        "A digital restaurant menu platform with admin dashboard, dynamic menu management, and kitchen-side order processing. Supports image uploads and real-time updates.",
-      tech: ["React", "Node.js", "Drizzle", "Qr code API"],
-      github: "https://github.com/Onebluesky882/menuX-client",
-      demo: "https://menu-x-five.vercel.app/",
-      image: "images/frontend.png",
-    },
-    {
-      title: "App Order Food With Live QR Code Checking",
+      title: "Consumer App Order Food With Payment Live",
       description:
         "An ordering system where customers scan a QR code to view menus, place orders, and track food status. Designed for real-time communication between kitchen and customer devices.",
       tech: ["React", "Node.js", "Next.js", "QR Code API"],
       github: "https://github.com/Onebluesky882/menuX-consumer",
-      demo: "https://menuxclient.vercel.app/",
+      demo: "https://menux-consumer.vercel.app/",
       image: "images/consumer.png",
+    },
+    {
+      title: "Social App",
+      description:
+        "A social media platform featuring user authentication, real-time post updates, likes/comments, and profile management — built with a modern fullstack stack.",
+      tech: ["Next.js", "TypeScript", "Supabase", "Tailwind"],
+      github: "",
+      demo: "http://web-boardmvp.vercel.app/",
+      image: "images/socialApp.png",
     },
   ];
 
