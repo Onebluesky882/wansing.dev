@@ -10,8 +10,8 @@ const Message = () => {
 
 export const SectionOne = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+    <section className="relative h-[50vh] flex items-center justify-center overflow-hidden ">
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-900/50"></div>
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -41,7 +41,7 @@ export const SectionOne = () => {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-6 mb-12">
           <a
             href={`/resume.pdf`}
             download
@@ -68,7 +68,7 @@ export const SectionOne = () => {
           >
             <div className="text-2xl">
               {" "}
-              <FaGithubAlt />
+              <FaGithubAlt size={45} className="hover:animate-bounce" />
             </div>
           </a>
           <a
@@ -79,7 +79,7 @@ export const SectionOne = () => {
             className="p-3 bg-gray-800 rounded-full hover:bg-blue-600 transition-all duration-300 hover:scale-110"
           >
             <div className="text-2xl">
-              <HiOutlineMail />
+              <HiOutlineMail size={45} className="hover:animate-bounce" />
             </div>
           </a>
           <a
@@ -87,7 +87,7 @@ export const SectionOne = () => {
             className="p-3 bg-gray-800 rounded-full hover:bg-purple-600 transition-all duration-300 hover:scale-110"
           >
             <div className="text-2xl">
-              <FaTelegram />
+              <FaTelegram size={45} className="hover:animate-bounce" />
             </div>
           </a>
         </div>

@@ -1,14 +1,39 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { FaDocker } from "react-icons/fa";
+import { SiDrizzle } from "react-icons/si";
 import { SectionOne } from "./pre-load/Profile";
+import { AiFillCode } from "react-icons/ai";
+import { SiNestjs } from "react-icons/si";
+import { SiSupabase } from "react-icons/si";
+import { BiLogoTypescript } from "react-icons/bi";
+import { SiSocketdotio } from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
+import { FaNode } from "react-icons/fa";
 export default function PortfolioHomepage() {
   const skills = [
-    { icon: "⚛️", name: "React/Next.js", level: 90 },
-    { icon: "🔷", name: "TypeScript", level: 85 },
-    { icon: "🏰", name: "NestJS", level: 80 },
-    { icon: "🟢", name: "Node.js", level: 85 },
-    { icon: "🐘", name: "PostgreSQL", level: 75 },
-    { icon: "🐳", name: "Docker", level: 70 },
+    { icon: <SiNextdotjs />, name: "React/Next.js", level: 90 },
+    {
+      icon: <BiLogoTypescript color="#486BBA" />,
+      name: "TypeScript",
+      level: 85,
+    },
+    { icon: <SiNestjs color="#B43947" />, name: "NestJS", level: 80 },
+    { icon: <FaNode color="#81B14B" />, name: "Node.js", level: 85 },
+    {
+      icon: <BiLogoPostgresql color="#97B5B6" />,
+      name: "PostgreSQL",
+      level: 75,
+    },
+    {
+      icon: <SiDrizzle color="#CBE956" />,
+      name: "Drizzle",
+      level: 75,
+    },
+    { icon: <FaDocker className="#3858E4" />, name: "Docker", level: 70 },
+    { icon: <SiSocketdotio />, name: "WebSocket.io", level: 70 },
+    { icon: <SiSupabase color="#7BC485" />, name: "Supabase", level: 70 },
   ];
 
   const projects = [
@@ -63,18 +88,12 @@ export default function PortfolioHomepage() {
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="bg-gray-800/50 backdrop-blur rounded-2xl p-6 hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50"
+                className="bg-gray-800/50 backdrop-blur rounded-2xl p-6 hover:bg-gray-700/50 transition-all duration-300 border-2 border-gray-500/50"
               >
                 <div className="flex items-center mb-4">
                   <div className="text-3xl mr-4">{skill.icon}</div>
                   <div>
                     <h3 className="text-lg font-semibold">{skill.name}</h3>
-                    <div className="w-full bg-gray-700 rounded-full h-2 mt-2">
-                      <div
-                        className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-1000"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -124,15 +143,18 @@ export default function PortfolioHomepage() {
                   </div>
                   <div className="flex space-x-4">
                     <a
-                      target="black"
+                      target="blank"
                       href={project.github}
                       className="flex items-center text-gray-400 hover:text-white transition-colors"
                     >
-                      <span className="mr-2">🐱</span>
+                      <span className="mr-2">
+                        {" "}
+                        <AiFillCode color="#73F75C" />
+                      </span>
                       Code
                     </a>
                     <a
-                      target="black"
+                      target="blank"
                       href={project.demo}
                       className="flex items-center text-gray-400 hover:text-blue-400 transition-colors"
                     >
